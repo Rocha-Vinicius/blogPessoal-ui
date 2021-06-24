@@ -1,0 +1,9 @@
+#img-bg{
+    background-image: url(https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-1.2.1);
+
+    min-height: 977px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,9 @@
+#img-bg{
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/948/812/920/pac-man-wallpaper-preview.jpg);
+
+    min-height: 977px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
