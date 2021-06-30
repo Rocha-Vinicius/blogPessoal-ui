@@ -1,4 +1,4 @@
-<div class="container-fluid" style="background-color: #032357;">
+<div class="container-fluid" style="background-color: #080b8a;">
 
     <div class="row d-flex align-items-center">
 
@@ -10,18 +10,18 @@
 
                     <div class="form-group text-light">
                         <label for="usuario">Usuário</label>
-                        <input class="form-control" type="text" name="usuario" 
+                        <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" 
                         id="usuario" placeholder="Seu usuário">
                     </div>
 
                     <div class="form-group text-light">
                         <label for="senha">Senha</label>
-                        <input class="form-control" type="password" name="senha" 
+                        <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" 
                         id="senha" placeholder="Sua senha">
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-info">Entrar</button>
+                        <button class="btn btn-info" (click) ='entrar()'>Entrar</button>
                     </div>
 
                     <hr class="mt-5 mb-5">
