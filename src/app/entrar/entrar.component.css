@@ -8,3 +8,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.bg{
+    background-color: rgba(148, 155, 158, 0.404);
+    width: 18rem
+}
