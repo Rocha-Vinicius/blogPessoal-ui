@@ -3,7 +3,7 @@
     <div class="row b-secondary">
         <div class="col-md-12 text-white">
 
-            <a routerLink="/inicio" class="text-white text-lest"> <i class="fa fa-angle-double-lest" aria-hidden="true"></i> início
+            <a routerLink="/inicio" class="text-white text-lest"><i class="fa fa-angle-double-left" aria-hidden="true"></i> início
             </a>
 
             <h1 class="fs-54 text-center">Temas</h1>
@@ -52,8 +52,8 @@
                     <th>{{item.id}}</th>
                     <td>{{item.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                        <button class="btn btn-info mr-3">Editar</button>
-                        <button class="btn btn-danger">Apagar</button>
+                        <button class="btn btn-info mr-3" [routerLink]="['/tema-edit', item.id]">Editar</button>
+                        <button class="btn btn-danger" [routerLink]="['/tema-delete', item.id]">Apagar</button>
                     </td>
                   </tr>
                 </tbody>
