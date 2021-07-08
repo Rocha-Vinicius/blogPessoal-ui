@@ -3,3 +3,10 @@
     width: 300px;
     
 }
+.bgmodal{
+    
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(https://lh3.googleusercontent.com/proxy/KY4EEipJ-g3iuM_IpLIeC_r_JC2Ufnb10a0_FmenyWPGARdhdYQnAMDRoK3vOaqQ0daiRq7MZZYO1gZZMj3p-8GEaRVMYLzooPll5SBTAWuhzpYEuthZ3mp8yaIXXCvgw004);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,15 +1,15 @@
 <div class="container-fluid bgb">
 
-    <div class="row">
+    <div class="row d-flex align-items-center">
 
         <div class="col-md-6" id="img-bg"></div>
 
-        <div class="col-md-6 mt-5 mb-5">
+        <div class="col-md-5 mt-5 mb-5">
 
             <div class="row d-flex mt-5 justify-content-center">
-                <div class="col-md-0">
-                    
-                    <div class="shadow align-items-center card bg" style="height: 44rem; width: 32rem;">
+                <div class="col-md-6">
+
+                    <div class="shadow align-items-center card bg" style="height: 50rem; width: 30rem;">
                         <div class="card-body">
                             <h1 class="text-center mb-3 text-light
 
@@ -17,32 +17,32 @@
 
                             <div class="form-group text-light">
                                 <label for="nome">Nome</label>
-                                <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" 
-                                id="nome" placeholder="Seu nome">
+                                <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
+                                    placeholder="Seu nome">
                             </div>
 
                             <div class="form-group text-light">
                                 <label for="usuario">Usuário</label>
-                                <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usuario" 
-                                id="usuario" placeholder="Seu usuário">
+                                <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usuario"
+                                    id="usuario" placeholder="Seu usuário">
                             </div>
 
                             <div class="form-group text-light">
                                 <label for="foto">Link da Foto</label>
-                                <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" 
-                                id="foto" placeholder="Sua foto">
+                                <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto"
+                                    placeholder="Sua foto">
                             </div>
 
                             <div class="form-group text-light">
                                 <label for="senha">Senha</label>
                                 <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha"
-                                id="senha" placeholder="Sua senha">
+                                    id="senha" placeholder="Sua senha">
                             </div>
 
                             <div class="form-group text-light">
                                 <label for="confirmSenha">Confirmar Senha</label>
-                                <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha" 
-                                id="confirmSenha" placeholder="Confirme a senha">
+                                <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha"
+                                    id="confirmSenha" placeholder="Confirme a senha">
                             </div>
 
                             <div class="form-group text-light">
@@ -53,13 +53,19 @@
                                     <option value="adm">Administrador</option>
                                 </select>
                             </div>
-                            
-                            <hr>
 
-                            <div class="mt-4 mb-5 d-flex justify-content-center">
-                                <button type="submit" class="btn btn-danger mr-4" routerLink="/entrar">Cancelar</button>
-                                <button type="submit" class="btn btn-success" (click)='cadastrar()' >Cadastrar</button>
+                            <hr class="mt-5">
+
+                            <div class="mt-4 mb-3 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-success" (click)='cadastrar()'>Cadastrar</button>
                             </div>
+
+                            <div class="text-center">
+                                <p>Já possui uma conta?
+                                </p>
+                                <a routerLink="/entrar" class="text-info">Entrar</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
