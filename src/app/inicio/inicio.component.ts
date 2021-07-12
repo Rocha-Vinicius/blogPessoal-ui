@@ -7,7 +7,7 @@ import { User } from '../model/User';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
-import { UsuarioService } from '../service/usuario.service';
+
 
 @Component({
   selector: 'app-inicio',
@@ -30,7 +30,7 @@ export class InicioComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     private temaService: TemaService,
-    private usuarioService: UsuarioService
+    private authService: AuthService
   ) { }
 
   ngOnInit() {
@@ -54,14 +54,14 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  getAllPostagens(){
+  getAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
   }
 
-  findByIdUser(){
-    this.usuarioService.getByIdUser(this.idUser).subscribe((resp: User) => {
+  findByIdUser() {
+    this.authService.getByIdUser(this.idUser).subscribe((resp: User) => {
       this.user = resp
     })
   }
@@ -73,8 +73,8 @@ export class InicioComponent implements OnInit {
     this.user.id = this.idUser
     this.postagem.usuario = this.user
 
-    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) =>{
-    this.postagem = resp
+    this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
+      this.postagem = resp
       alert('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
       this.getAllPostagens()
