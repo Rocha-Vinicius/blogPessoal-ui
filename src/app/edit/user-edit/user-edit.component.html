@@ -1,0 +1,69 @@
+<div class="container mb-5 mt-5">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Atualizar meu Perfil</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex mt-5 justify-content-center">
+        <div class="col-md-6">
+
+            <div class="shadow align-items-center card bg" style="height: 50rem; width: 30rem;">
+                <div class="card-body">
+                    <h1 class="text-center mb-3 text-light
+
+                    ">Cadastro</h1>
+
+                    <div class="form-group text-light">
+                        <label for="nome">Nome</label>
+                        <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
+                            placeholder="Seu nome">
+                    </div>
+
+                    <div class="form-group text-light">
+                        <label for="usuario">Usuário</label>
+                        <input [(ngModel)]='user.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                            placeholder="Seu usuário">
+                    </div>
+
+                    <div class="form-group text-light">
+                        <label for="foto">Link da Foto</label>
+                        <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto"
+                            placeholder="Sua foto">
+                    </div>
+
+                    <div class="form-group text-light">
+                        <label for="senha">Senha</label>
+                        <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha"
+                            id="senha" placeholder="Sua senha">
+                    </div>
+
+                    <div class="form-group text-light">
+                        <label for="confirmSenha">Confirmar Senha</label>
+                        <input [(ngModel)]='user.senha' class="form-control" type="password" name="confirmSenha"
+                            id="confirmSenha" placeholder="Confirme a senha">
+                    </div>
+
+                    <div class="form-group text-light">
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form-control" name="tipo" id="tipo" (change)='tipoUser($event)'>
+                            <option>Selecione um tipo de usuário:</option>
+                            <option value="normal">Normal</option>
+                            <option value="adm">Administrador</option>
+                        </select>
+                    </div>
+
+                    <hr class="mt-5">
+
+                    <div class="mt-4 mb-3 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-danger" routerLink="/inicio"
+                            class="text-info mr-4">Cancelar</button>
+                        <button type="submit" class="btn btn-success" (click)='atualizar()'>Atualizar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
